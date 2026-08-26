@@ -30,7 +30,7 @@
           dshLib = import ./lib { inherit pkgs; lib = nixpkgs.lib; };
           base = import ./default.nix { pkgs = pkgs; };
           mkCorePackage = import ./lib/mk-core.nix { inherit (nixpkgs) lib; pkgs = pkgs; };
-          # core: @deepseek-ai/dsh rc.7, sharing the SINGLE cosmokit derivation
+          # core: @deepseek-ai/dsh rc.2, sharing the SINGLE cosmokit derivation
           # (see lib/mk-core.nix). Exposed as packages.<sys>.core.
           core = mkCorePackage {
             version = "0.1.1-rc.2";

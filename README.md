@@ -2,7 +2,7 @@
 
 Installable **dsh plugins** distributed as a [NUR](https://github.com/nix-community/NUR)
 repository — the plugin packages and the builder library are flake inputs.
-NUR registration is not active yet; the layout is NUR-compatible and the
+NUR registration is planned but not yet submitted; the layout is NUR-compatible and the
 `packages` output is what NUR's CI builds and caches once registered.
 
 ## Packages
