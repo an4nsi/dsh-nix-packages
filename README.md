@@ -9,7 +9,7 @@ NUR registration is not active yet; the layout is NUR-compatible and the
 
 | Package | Version | What it is |
 |---|---|---|
-| `core` | 0.1.0-rc.7 | `@deepseek-ai/dsh` core, sharing the single cosmokit derivation |
+| `core` | 0.1.1-rc.2 | `@deepseek-ai/dsh` core, sharing the single cosmokit derivation |
 | `pi2dsh` | 0.16.0 | Pi Host ABI bridge — runs Pi extensions as native dsh plugins |
 | `dsh-better-sidebar` | 0.15.2 | Improved sidebar for the dsh web UI |
 | `dsh-mobile-ui` | 0.1.1 | Mobile UI tuning |

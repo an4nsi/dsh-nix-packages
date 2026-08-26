@@ -33,9 +33,9 @@
           # core: @deepseek-ai/dsh rc.7, sharing the SINGLE cosmokit derivation
           # (see lib/mk-core.nix). Exposed as packages.<sys>.core.
           core = mkCorePackage {
-            version = "0.1.0-rc.7";
-            tarballHash = "sha256-L48Ldj1hGsU296lBHuQ8CvwGfBuHMsMQLATb45i8rMU=";
-            npmDepsHash = "sha256-biGcdvfEH7fP2vVRurfc6cYrpxC0F9uKDToh/XZ3Mdo=";
+            version = "0.1.1-rc.2";
+            tarballHash = "sha256-R+wF9FraWrh3ea4YqQRWtev/VCHcD/XBeWd9ZeHBYFc=";
+            npmDepsHash = "sha256-KqmjvS3vAcvd8Q9yBkG2tuQWfkikqIPWNT13xu9zBJ4=";
             lockDir = ./vendor/dsh;
             cosmokit = base.cosmokit;
           };
