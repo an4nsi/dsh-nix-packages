@@ -15,7 +15,7 @@ NUR registration is not active yet; the layout is NUR-compatible and the
 | `dsh-mobile-ui` | 0.1.1 | Mobile UI tuning |
 | `pi-fff` | 0.10.5 | FFF fuzzy-find tools (ffgrep/fffind) via pi2dsh |
 | `pi-hashline-edit-pro` | 2.6.3 | Hash-anchored file editing via pi2dsh |
-| `dsh-web-search-exa` | 0.1.0-rc.7 | Exa search provider (core-aligned; mounted via cordis patch) |
+| `dsh-web-search-exa` | 0.1.1-rc.2 | Exa search provider (core-aligned; mounted via cordis patch) |
 | `cosmokit` / `schemastery` | 1.8.2 / 3.18.1 | Shared single-instance leaves (the DI container + schema lib) |
 
 Each builds onto `out/lib/node_modules/<name>` — exactly the flat entry the

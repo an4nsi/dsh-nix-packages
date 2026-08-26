@@ -11,12 +11,12 @@
 }:
 mkNpmPlugin {
   name = "@deepseek-ai/dsh-web-search-exa";
-  version = "0.1.0-rc.7";
+  version = "0.1.1-rc.2";
   forceEmptyCache = true;
   tarball = fetchurl {
-    url = "https://registry.npmjs.org/@deepseek-ai/dsh-web-search-exa/-/dsh-web-search-exa-0.1.0-rc.7.tgz";
-    sha256 = "sha256-Vu50uuowBlAjijkOGZDcG2znmwLVoORTReUgXxbga+k=";
+    url = "https://registry.npmjs.org/@deepseek-ai/dsh-web-search-exa/-/dsh-web-search-exa-0.1.1-rc.2.tgz";
+    sha256 = "sha256-MSuwoS7F+A6HUMdYcg1A0oDx+GwkGkFYLZUX9IxXSKs=";
   };
-  npmDepsHash = "sha256-KLiBy9FWHkj9KjPKeo4nYyEE7vyO+D+09vqtTltSeFM=";
+  npmDepsHash = "sha256-bzm9turjgPDVi4AxjfKehQ81HLz/qZnpYI+sJ7RdbD0=";
   patchDir = ./vendor;
 }
