@@ -7,11 +7,11 @@
 }:
 mkNpmPlugin {
   name = "pi-hashline-edit-pro";
-  version = "2.6.3";
+  version = "2.7.2";
   tarball = fetchurl {
-    url = "https://registry.npmjs.org/pi-hashline-edit-pro/-/pi-hashline-edit-pro-2.6.3.tgz";
-    sha256 = "sha256-Ls6gIL+FJHHUTLdknYHOj+IU1jcPQfUuzOJOaoclMhM=";
+    url = "https://registry.npmjs.org/pi-hashline-edit-pro/-/pi-hashline-edit-pro-2.7.2.tgz";
+    sha256 = "sha256-JuP8MKNGoaJxxZzxm3qCQwzcFIuSb2ElBasRgYh7YLQ=";
   };
-  npmDepsHash = "sha256-yIy9lJfcvyv5VJAjgKpJ2UnA+Y04NYyNVqO+5tNeymw=";
+  npmDepsHash = "sha256-n+BptBo4i3Lc+bEhbZBnAwXeKXis4HomJcnbAseFuDU=";
   patchDir = ./vendor;
 }

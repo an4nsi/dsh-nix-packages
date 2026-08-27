@@ -7,11 +7,11 @@ Installable **dsh plugins** and their builder library, distributed as a [Nix fla
 | Package | Version | What it is |
 |---|---|---|
 | `core` | 0.1.1-rc.2 | `@deepseek-ai/dsh` core, sharing the single cosmokit derivation |
-| `pi2dsh` | 0.16.0 | Pi Host ABI bridge — runs Pi extensions as native dsh plugins |
-| `dsh-better-sidebar` | 0.15.2 | Improved sidebar for the dsh web UI |
+| `pi2dsh` | 0.21.0 | Pi Host ABI bridge — runs Pi extensions as native dsh plugins |
+| `dsh-better-sidebar` | 0.16.1 | Improved sidebar for the dsh web UI |
 | `dsh-mobile-ui` | 0.1.1 | Mobile UI tuning |
 | `pi-fff` | 0.10.5 | FFF fuzzy-find tools (ffgrep/fffind) via pi2dsh |
-| `pi-hashline-edit-pro` | 2.6.3 | Hash-anchored file editing via pi2dsh |
+| `pi-hashline-edit-pro` | 2.7.2 | Hash-anchored file editing via pi2dsh |
 | `dsh-web-search-exa` | 0.1.1-rc.2 | Exa search provider (core-aligned; mounted via cordis patch) |
 | `dsh-web-ding` | 0.3.0 | Job-completion browser notifications (Web Notification API + chime) |
 | `cosmokit` / `schemastery` | 1.8.2 / 3.18.1 | Shared single-instance leaves (the DI container + schema lib) |
@@ -52,8 +52,9 @@ dsh-nix-packages.lib.${system}.mkNpmPlugin { name = "pi2dsh"; ... }
 2. `pkgs/<name>/vendor/` — cleaned package.json + lock
 3. one line in `default.nix`
 
-(An automated update flow — version bump + hash resolution + CI — ships in a
-later commit.)
+(Automated bumps: `./update.py <name> [version]` regenerates the patch-dir
+package.json + lock, patches the version/tarball/hash fields of
+`pkgs/<name>/default.nix` and resolves npmDepsHash from the build.)
 
 ## Structure
 
