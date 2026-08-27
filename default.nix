@@ -63,6 +63,7 @@ in {
   pi2dsh = callPackage ./pkgs/pi2dsh {};
   dsh-better-sidebar = callPackage ./pkgs/dsh-better-sidebar {};
   dsh-web-search-exa = callPackage ./pkgs/dsh-web-search-exa {};
+  dsh-web-ding = callPackage ./pkgs/dsh-web-ding {};
   dsh-mobile-ui = callPackage ./pkgs/dsh-mobile-ui {};
   pi-fff = callPackage ./pkgs/pi-fff {};
   pi-hashline-edit-pro = callPackage ./pkgs/pi-hashline-edit-pro {};

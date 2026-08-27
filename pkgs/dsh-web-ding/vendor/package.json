@@ -1,0 +1,22 @@
+{
+  "name": "dsh-web-ding",
+  "version": "0.3.0",
+  "description": "DSH web plugin: browser notification + two-note chime when the main agent finishes a turn. Toggles live in the official Settings > General page.",
+  "type": "module",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "types": "lib/types/index.d.ts",
+  "exports": {
+    ".": { "types": "./lib/types/index.d.ts", "default": "./lib/index.js" },
+    "./client": { "types": "./lib/types/client/index.d.ts", "default": "./lib/client.js" },
+    "./package.json": "./package.json"
+  },
+  "engines": { "node": ">=20" },
+  "dsh": {
+    "client": {
+      "inject": ["@deepseek-ai/dsh-client-runtime", "@deepseek-ai/dsh-client-ui-slots"],
+      "platform": "web"
+    }
+  },
+  "files": ["lib", "src", "dsh.plugin.json", "README.md", "LICENSE"]
+}

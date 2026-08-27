@@ -13,6 +13,7 @@ Installable **dsh plugins** and their builder library, distributed as a [Nix fla
 | `pi-fff` | 0.10.5 | FFF fuzzy-find tools (ffgrep/fffind) via pi2dsh |
 | `pi-hashline-edit-pro` | 2.6.3 | Hash-anchored file editing via pi2dsh |
 | `dsh-web-search-exa` | 0.1.1-rc.2 | Exa search provider (core-aligned; mounted via cordis patch) |
+| `dsh-web-ding` | 0.3.0 | Job-completion browser notifications (Web Notification API + chime) |
 | `cosmokit` / `schemastery` | 1.8.2 / 3.18.1 | Shared single-instance leaves (the DI container + schema lib) |
 
 Each builds onto `out/lib/node_modules/<name>` — exactly the flat entry the
