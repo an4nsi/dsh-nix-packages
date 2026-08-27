@@ -1,9 +1,6 @@
 # dsh-nix-packages
 
-Installable **dsh plugins** distributed as a [NUR](https://github.com/nix-community/NUR)
-repository — the plugin packages and the builder library are flake inputs.
-NUR registration is planned but not yet submitted; the layout is NUR-compatible and the
-`packages` output is what NUR's CI builds and caches once registered.
+Installable **dsh plugins** and their builder library, distributed as a [Nix flake](https://nixos.org) package set.
 
 ## Packages
 
@@ -60,16 +57,10 @@ later commit.)
 ## Structure
 
 ```
-default.nix     NUR entry: lib + overlays + modules + each plugin attr
+default.nix     entry: lib + overlays + modules + each plugin attr
 lib/            builder functions (mkNpmPlugin, mkNpmLeaf, mkCorePackage)
 overlay.nix     expose all plugins onto `super`
 pkgs/<name>/    one derivation per plugin + its vendor/ metadata
 vendor/dsh/     core lock dir (mkCorePackage lockDir)
 modules/        NixOS modules (future: dsh systemd module)
 ```
-
-## Publish to NUR
-
-Follow [NUR: how to add your own repository](https://github.com/nix-community/NUR#how-to-add-your-own-repository)
-once the plugin set is stable. The `packages` output is what NUR's CI builds
-and caches.

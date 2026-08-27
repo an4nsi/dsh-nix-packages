@@ -1,10 +1,10 @@
-# dsh-nix-packages repository — installable dsh plugins as a NUR package set.
+# dsh-nix-packages repository — installable dsh plugins as a flake package set.
 #
-# NUR convention (mirrors nix-community/NUR + the local nur-packages):
+# Convention:
 #   * `lib`      — builder FUNCTIONS (mkNpmPlugin) callable by other packages
 #   * `overlays` — make the package set usable as a nixpkgs overlay
 #   * `modules`  — NixOS modules (future: systemd module for dsh)
-#   * everything else is a derivation the NUR/CI tooling builds & caches
+#   * everything else is a derivation the CI tooling builds & caches
 #
 # `pkgs` must be taken as an argument (never <nixpkgs>); callPackage wires
 # each package's { mkNpmPlugin, fetchurl, ... } from (pkgs // { lib }).
@@ -13,7 +13,7 @@ let
   customLib = import ./lib { inherit pkgs; lib = pkgs.lib; };
   lib = pkgs.lib // customLib;
   # mkNpmPlugin etc. are exposed at top level so per-package functions can
-  # take { mkNpmPlugin, fetchurl } directly (NUR callPackage idiom)
+  # take { mkNpmPlugin, fetchurl } directly (callPackage idiom)
   callPackage = lib.callPackageWith (pkgs // { inherit lib; } // customLib);
   mkNpmLeaf = customLib.mkNpmLeaf;
 
@@ -43,7 +43,7 @@ let
     ln -s ${sharedSchemastery}/lib/node_modules/@deepseek-ai/schemastery $out/lib/node_modules/schemastery
   '';
 in {
-  # NUR special attributes
+  # special attributes
   lib = customLib;               # builder functions
   overlays = import ./overlays;  # nixpkgs overlays
   modules = import ./modules;    # NixOS modules

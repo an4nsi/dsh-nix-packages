@@ -1,6 +1,6 @@
 # lib/default.nix — the builder functions for dsh plugins.
 #
-# A NUR `lib` is a set of FUNCTIONS (not derivations). Two builders are
+# The `lib` output is a set of FUNCTIONS (not derivations). Two builders are
 # exposed here; together they turn npm packages into the flat node_modules
 # layout the dsh profile peers expect.
 #

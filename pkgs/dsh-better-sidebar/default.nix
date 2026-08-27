@@ -1,7 +1,7 @@
 # dsh-better-sidebar — improved sidebar for the dsh web UI.
 # Peer @deepseek-ai/dsh-* resolve against the profile's flat node_modules.
 #
-# schemastery is provided by the shared top-level node_modules (the dsh-nur
+# schemastery is provided by the shared top-level node_modules (the
 # `schemastery` bundle, sharing the single cosmokit derivation). The SOURCE
 # vendor/package.json declares it as a peer, but the nix-build view (nix/)
 # strips it so `npm` does not try to fetch a peer — there is exactly one

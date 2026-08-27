@@ -1,7 +1,7 @@
-# dsh-nix-packages — installable dsh plugins distributed as a NUR repository.
+# dsh-nix-packages — installable dsh plugins distributed as a flake.
 #
-#   legacyPackages = the full package+lib set (NUR tooling builds these)
-#   packages       = only the derivations (NUR/CI filters)
+#   legacyPackages = the full package+lib set
+#   packages       = only the derivations
 #   overlays       = nixpkgs overlay exposing plugins as super.<name>
 #   lib            = package builders (mkNpmPlugin, mkNpmLeaf, mkCorePackage)
 #
@@ -14,7 +14,7 @@
 #   ... pkgs = pkgs // dsh-nix-packages.lib.${pkgs.system}; # builder functions
 #   ... or overlays = [ dsh-nix-packages.overlays.${system}.default ]
 {
-  description = "dsh plugins — NUR-layout package set (installable via NUR tooling)";
+  description = "dsh plugins — flake package set for DeepSeek Harness";
 
   inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
