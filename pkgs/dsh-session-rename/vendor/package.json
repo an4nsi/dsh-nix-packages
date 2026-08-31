@@ -1,0 +1,19 @@
+{
+  "name": "dsh-session-rename",
+  "version": "0.1.0",
+  "description": "DSH host plugin: rename_session tool - finalize the current session title at wrap-up, [tag] [tag] summary format.",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "README.md",
+    "LICENSE"
+  ],
+  "license": "MIT"
+}

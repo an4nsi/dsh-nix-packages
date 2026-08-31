@@ -1,0 +1,40 @@
+{
+  "name": "dsh-fork-view",
+  "version": "0.1.0",
+  "description": "DSH web plugin: a pi-web-style nested fork/subagent process tree (design: agegr/pi-web) in the left sidebar.",
+  "type": "module",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "types": "lib/types/index.d.ts",
+  "exports": {
+    ".": { "types": "./lib/types/index.d.ts", "default": "./lib/index.js" },
+    "./client": { "types": "./lib/types/index.d.ts", "default": "./lib/client.js" },
+    "./client/api": { "types": "./lib/types/index.d.ts", "default": "./lib/client.js" },
+    "./package.json": "./package.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/an4nsi/dsh-fork-view.git"
+  },
+  "bugs": { "url": "https://github.com/an4nsi/dsh-fork-view/issues" },
+  "engines": { "node": ">=20" },
+  "files": [
+    "lib/**/*.js",
+    "lib/types/**/*.d.ts",
+    "cordis.patch.yml",
+    "README.md",
+    "README.zh.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": { "patch": "./cordis.patch.yml" },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-runtime",
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-slots"
+      ],
+      "platform": "web"
+    }
+  }
+}

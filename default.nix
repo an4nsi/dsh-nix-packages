@@ -64,6 +64,8 @@ in {
   dsh-better-sidebar = callPackage ./pkgs/dsh-better-sidebar {};
   dsh-web-search-exa = callPackage ./pkgs/dsh-web-search-exa {};
   dsh-web-ding = callPackage ./pkgs/dsh-web-ding {};
+  dsh-fork-view = callPackage ./pkgs/dsh-fork-view {};
+  dsh-session-rename = callPackage ./pkgs/dsh-session-rename {};
   dsh-mobile-ui = callPackage ./pkgs/dsh-mobile-ui {};
   pi-fff = callPackage ./pkgs/pi-fff {};
   pi-hashline-edit-pro = callPackage ./pkgs/pi-hashline-edit-pro {};
